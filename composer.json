@@ -1,0 +1,31 @@
+{
+	"name" : "magdev/mailchimp-silex-provider",
+	"description" : "Silex Service-Provider for the Mailchimp-API",
+	"version" : "0.1.0@dev",
+	"type" : "library",
+	"authors" : [{
+			"name" : "Marco Grätsch",
+			"email" : "magdev3.0@googlemail.com",
+			"role" : "lead"
+		}
+	],
+	"keywords" : [
+		"Mailchimp",
+		"Client",
+		"Silex",
+		"Service-Provider",
+		"API"
+	],
+	"license" : "MIT",
+	"require" : {
+		"mailchimp/mailchimp" : "dev-master",
+		"php" : ">=5.3",
+		"silex/silex" : "~1"
+	},
+	"autoload" : {
+		"psr-0" : {
+			"SilexMailchimp" : "src"
+		}
+	},
+	"minimum-stability" : "dev"
+}
