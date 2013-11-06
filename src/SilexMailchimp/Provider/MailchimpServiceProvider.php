@@ -45,6 +45,13 @@ class MailchimpServiceProvider implements ServiceProviderInterface
 
     public function register(Application $app)
     {
+    	if (!isset($app['mailchimp.apikey']) || !$app['mailchimp.apikey']) {
+    		throw new \RuntimeException('API-Key is required to use the mailchimp-service');
+    	}
+    	if (!isset($app['mailchimp.options'])) {
+    		$app['mailchimp.options'] = array();
+    	}
+    	
         $app['mailchimp'] = $app->share(function(Application $app) {
             return new Mailchimp($app['mailchimp.apikey'], $app['mailchimp.options']);
         });
