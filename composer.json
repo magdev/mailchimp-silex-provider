@@ -18,7 +18,7 @@
 	],
 	"license" : "MIT",
 	"require" : {
-		"mailchimp/mailchimp" : "dev-master",
+		"mailchimp/mailchimp" : "~2.0",
 		"php" : ">=5.3",
 		"silex/silex" : "~1"
 	},
@@ -26,6 +26,5 @@
 		"psr-0" : {
 			"SilexMailchimp" : "src"
 		}
-	},
-	"minimum-stability" : "dev"
+	}
 }
